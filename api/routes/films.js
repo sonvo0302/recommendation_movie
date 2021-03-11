@@ -301,7 +301,7 @@ router.get('/:filmId', auth, async (req, res, next) => {
             const film_user_history = new Film_User_History({
                 _id: new mongoose.Types.ObjectId(),
                 user: loginId,
-                film: req.params.filmId,
+                film: id,
                 create_at: Date.now().toString(),
             });
 
